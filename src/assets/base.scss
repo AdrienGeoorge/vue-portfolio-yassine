@@ -1,39 +1,32 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-  --vt-c-light-gray: #e9ecef;
+/* FONTS */
+@font-face {
+  font-family: NimbusSanL Bol;
+  src: url(fonts/NimbusSanL-Bol.otf) format('opentype');
+  font-display: swap;
+}
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+@font-face {
+  font-family: NimbusSanL Bolita;
+  src: url(fonts/NimbusSanL-BolIta.otf) format('opentype');
+  font-display: swap;
+}
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+@font-face {
+  font-family: NimbusSanL Reg;
+  src: url(fonts/NimbusSanL-Reg.otf) format('opentype');
+  font-display: swap;
+}
 
-  --vt-c-text-light-1: var(--vt-c-black-mute);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+@font-face {
+  font-family: NimbusSanL Regita;
+  src: url(fonts/NimbusSanL-RegIta.otf) format('opentype');
+  font-display: swap;
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-  --color-box-icon: var(--vt-c-light-gray);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
+  --color-background--beige: #fbf0dd;
+  --color-background--black: #1d1d1b;
 }
 
 *,
@@ -42,6 +35,17 @@
   box-sizing: border-box;
   margin: 0;
   position: relative;
+}
+
+body {
+  background-color: var(--color-background--beige);
+  font-family: NimbusSanL Bol, sans-serif;
+  font-size: 15px;
+
+  #app {
+    max-width: 1600px;
+    margin: auto;
+  }
 }
 
 /* TRANSITIONS */
@@ -67,17 +71,85 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-    --color-box-icon: var(--vt-c-black-mute);
+/* HEADER */
+#nav {
+  padding: 4em 6em 0 6em;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1em;
+  position: fixed;
+  background-color: var(--color-background--beige);
+  z-index: 3;
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+  #nav-home-button {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 0.5em;
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    img, span {
+      justify-self: center;
+      align-self: center;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    justify-self: center;
+    align-self: center;
+
+    .icon-header-bob, .icon-experiences {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .icon-visual-universe {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+}
+
+/* CONTENT */
+
+#content {
+  padding: 10em 9em;
+}
+
+@media (max-width: 1300px) {
+  #nav {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #content {
+    padding: 12em 9em;
+  }
+}
+
+@media (max-width: 1080px) {
+  #nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #nav {
+    padding: 4em 2em 0 2em;
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    #nav-home-button {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  #content {
+    padding: 12em 3em;
   }
 }

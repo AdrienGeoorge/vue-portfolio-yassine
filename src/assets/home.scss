@@ -1,0 +1,127 @@
+#home-preview-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12em;
+
+  .boxes {
+    position: relative;
+
+    .box-style {
+      border: 5px solid var(--color-background--black);
+      background-color: var(--color-background--beige);
+      overflow: hidden;
+      z-index: 1;
+
+      &.box-visual-universe {
+        border-radius: 5em;
+
+        .logo-boxes {
+          width: 60%;
+        }
+      }
+
+      &.box-experiences {
+        border-radius: 10em;
+
+        .logo-boxes {
+          width: 60%;
+          padding: 2.5em 0;
+        }
+      }
+
+      .box-title {
+        background-color: var(--color-background--black);
+        color: var(--color-background--beige);
+        text-align: center;
+        padding: 1em;
+        font-size: 18px;
+      }
+
+      .box-content {
+        padding: 2em 3em;
+        text-align: center;
+      }
+    }
+
+    .box-offbeat-visual-universe, .box-offbeat-experiences {
+      position: absolute;
+      border: 5px solid var(--color-background--black);
+      width: 100%;
+      z-index: 0;
+    }
+
+    .box-offbeat-visual-universe {
+      top: 1.5em;
+      left: -1em;
+      height: 105%;
+      border-radius: 5em;
+    }
+
+    .box-offbeat-experiences {
+      top: 2em;
+      left: 0;
+      height: 102.5%;
+      border-radius: 9em;
+    }
+
+    .box-button {
+      display: block;
+      border-radius: 3em;
+      border: 5px solid var(--color-background--black);
+      padding: 1em;
+      text-align: center;
+      text-decoration: unset;
+      color: var(--color-background--black);
+      width: 12em;
+      margin: auto;
+
+      &:hover {
+        background-color: var(--color-background--black);
+        color: var(--color-background--beige);
+      }
+    }
+  }
+}
+
+#waves {
+  right: -44em;
+  top: 6.5em;
+  width: 48em;
+}
+
+#banner {
+  background-color: var(--color-background--black);
+  border-radius: 3em;
+  padding: 1em;
+  text-align: center;
+  color: var(--color-background--beige);
+  margin-top: 12em;
+  font-size: 18px;
+}
+
+@media (max-width: 1300px) {
+  #home-preview-boxes {
+    grid-template-columns: unset !important;
+    grid-gap: 6em;
+  }
+
+  #waves {
+    right: -30em;
+  }
+
+  #banner {
+    margin-top: 8em;
+  }
+}
+
+@media (max-width: 1080px) {
+  #waves {
+    right: -15em;
+  }
+}
+
+@media (max-width: 600px) {
+  #waves {
+    right: 10em;
+  }
+}

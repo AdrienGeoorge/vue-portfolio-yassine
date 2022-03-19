@@ -4,18 +4,26 @@ import Home from '../views/Home.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
     meta: {
-      title: 'Homepage'
+      title: 'Accueil'
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/visual-experience',
+    name: 'visual-experience',
+    component: () => import('../views/VisualExperience.vue'),
     meta: {
-      title: 'About'
+      title: 'Expérience visuelle'
+    }
+  },
+  {
+    path: '/experiences',
+    name: 'experiences',
+    component: () => import('../views/Experiences.vue'),
+    meta: {
+      title: 'Mon expérience'
     }
   }
 ]
