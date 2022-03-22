@@ -12,6 +12,12 @@
 }
 
 @font-face {
+  font-family: NimbusSan D-OT;
+  src: url(fonts/Nimbus-Sans-D-OT-Bold-Extended_32745.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
   font-family: NimbusSanL Reg;
   src: url(fonts/NimbusSanL-Reg.otf) format('opentype');
   font-display: swap;
@@ -46,6 +52,15 @@ body {
     max-width: 1600px;
     margin: auto;
   }
+}
+
+body, html{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none;
 }
 
 /* TRANSITIONS */
@@ -118,7 +133,7 @@ body {
 /* CONTENT */
 
 #content {
-  padding: 10em 9em;
+  padding: 10em 8em 2em 8em;
 }
 
 @media (max-width: 1300px) {
@@ -127,7 +142,7 @@ body {
   }
 
   #content {
-    padding: 12em 9em;
+    padding: 12em 8em 2em 8em;
   }
 }
 
@@ -137,7 +152,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #nav {
     padding: 4em 2em 0 2em;
     grid-template-columns: 1.5fr 1fr 1fr;
@@ -150,6 +165,6 @@ body {
   }
 
   #content {
-    padding: 12em 3em;
+    padding: 12em 4em 2em 4em;
   }
 }
