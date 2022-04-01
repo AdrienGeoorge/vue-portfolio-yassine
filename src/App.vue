@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterLink to="/" id="nav-home-button">
       <img :src="pictureHover" @mouseover="hover = true" @mouseleave="hover = false" alt="Accueil"
            class="icon-header-bob">
-      <span>Yassine El Arassi</span>
+      <span>Yassine<br>El Arassi</span>
     </RouterLink>
     <RouterLink to="/visual-experience">
       <img src="@/assets/images/header/icon-visual-universe.svg" alt="Expérience visuelle" class="icon-visual-universe">

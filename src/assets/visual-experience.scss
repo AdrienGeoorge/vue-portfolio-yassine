@@ -5,6 +5,7 @@
   text-align: center;
   color: var(--color-background--beige);
   font-size: 18px;
+  font-family: NimbusSan D-OT, sans-serif;
 }
 
 #recent-projects {
@@ -51,12 +52,6 @@
   }
 }
 
-@media (max-width: 1300px) {
-  #banner {
-    margin-top: 8em;
-  }
-}
-
 @media (max-width: 800px) {
   #recent-projects {
     width: unset;
@@ -69,10 +64,12 @@
       .project-logo {
         grid-column: unset;
         margin: auto;
+        order: 1 !important;
       }
 
       .project-texts {
         grid-column: unset;
+        order: 2 !important;
 
         &.right {
           text-align: center;

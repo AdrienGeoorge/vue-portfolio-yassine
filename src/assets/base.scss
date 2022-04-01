@@ -88,13 +88,14 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 
 /* HEADER */
 #nav {
-  padding: 4em 6em 0 6em;
+  padding: 2.5em 6em 0 6em;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 1em;
   position: fixed;
   background-color: var(--color-background--beige);
   z-index: 3;
+  width: 100%;
 
   #nav-home-button {
     display: grid;
